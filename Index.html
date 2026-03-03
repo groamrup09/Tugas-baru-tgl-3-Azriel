@@ -3,13 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laporan OOP Dart - Interaktif</title>
+<title>Laporan OOP Dart</title>
 
 <style>
 body{
   font-family: Arial, sans-serif;
   margin:40px;
   background:#f4f6f9;
+  line-height:1.6;
 }
 
 h1,h2{
@@ -19,93 +20,155 @@ h1,h2{
 .section{
   margin-bottom:40px;
   background:white;
-  padding:20px;
+  padding:25px;
   border-radius:10px;
   box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-button{
-  padding:8px 15px;
-  background:#0066ff;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-  margin-top:10px;
+pre{
+  background:#1e1e1e;
+  color:#00ff88;
+  padding:15px;
+  border-radius:8px;
+  overflow-x:auto;
 }
 
-button:hover{
-  background:#0044cc;
+code{
+  font-family: Consolas, monospace;
 }
 
-/* ===== MODAL ===== */
-.modal{
-  display:none;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.8);
-  z-index:9999;
-}
-
-.modal-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:90%;
-  max-width:1000px;
-  height:80%;
+.header-box{
   background:white;
+  padding:20px;
   border-radius:10px;
-  overflow:hidden;
-}
-
-.modal iframe{
-  width:100%;
-  height:100%;
-  border:none;
+  margin-bottom:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 </style>
 </head>
 
 <body>
 
-<h1>LAPORAN OOP DART (INTERAKTIF)</h1>
-<p><b>Nama:</b> Azriel Miracle Yuandre <br>
+<div class="header-box">
+<h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h1>
+<p><b>Nama:</b> Azriel Miracle Yuandre<br>
 <b>NIM:</b> 251410024</p>
+</div>
 
 <div class="section">
-<h2>Contoh Class Car</h2>
-<p>Klik tombol untuk melihat dan menjalankan kode di DartPad.</p>
+<h2>1. Class & Object (Tanpa Constructor)</h2>
+<pre><code>
+class Car {
+  String? model;
+  String? color;
 
-<button onclick="openModal()">
-Lihat & Jalankan Code
-</button>
+  void start() {
+    print('Car started!');
+  }
 
-</div>
-
-<!-- ===== MODAL ===== -->
-<div class="modal" id="modal" onclick="closeModal()">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <iframe id="dartFrame"></iframe>
-  </div>
-</div>
-
-<script>
-function openModal(){
-  document.getElementById("modal").style.display="block";
-  document.getElementById("dartFrame").src =
-  "https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c";
+  void stop() {
+    print('Car stopped!');
+  }
 }
 
-function closeModal(){
-  document.getElementById("modal").style.display="none";
-  document.getElementById("dartFrame").src="";
+void main() {
+  Car myCar = Car();
+  myCar.model = "Sedan";
+  myCar.color = "Merah";
+  myCar.start();
+  myCar.stop();
 }
-</script>
+</code></pre>
+</div>
+
+<div class="section">
+<h2>2. Constructor</h2>
+<pre><code>
+class Car {
+  String? model;
+  String? color;
+
+  Car(this.model, this.color);
+
+  void start() {
+    print('Car started!');
+  }
+}
+
+void main() {
+  Car myCar = Car('Toyota', 'Red');
+  print('model car: ${myCar.model}, color: ${myCar.color}');
+  myCar.start();
+}
+</code></pre>
+</div>
+
+<div class="section">
+<h2>3. Validasi Constructor (Mahasiswa)</h2>
+<pre><code>
+class Mahasiswa {
+  String nama;
+  String nim;
+  double ipk;
+
+  Mahasiswa(this.nama, this.nim, this.ipk) {
+    if (ipk < 0.0 || ipk > 4.0) {
+      throw ArgumentError('IPK harus berada dalam rentang 0.0 - 4.0');
+    }
+  }
+}
+</code></pre>
+</div>
+
+<div class="section">
+<h2>4. Encapsulation</h2>
+<pre><code>
+class Person {
+  String _name;
+  int age;
+
+  Person(this._name, this.age);
+
+  void setName(String name) {
+    _name = name;
+  }
+
+  String getName() {
+    return _name;
+  }
+}
+</code></pre>
+</div>
+
+<div class="section">
+<h2>5. Named Parameter Constructor</h2>
+<pre><code>
+class Produk {
+  final String id;
+  final String nama;
+  final double harga;
+  final int stok;
+  final String kategori;
+
+  Produk({
+    required this.id,
+    required this.nama,
+    required this.harga,
+    this.stok = 0,
+    this.kategori = 'Umum',
+  });
+}
+</code></pre>
+</div>
+
+<div class="section">
+<h2>Kesimpulan</h2>
+<p>
+OOP mempermudah pengelolaan program karena struktur kode menjadi lebih rapi,
+mudah dikembangkan, serta lebih aman melalui konsep enkapsulasi.
+Konsep seperti constructor dan named parameter membantu dalam inisialisasi data.
+</p>
+</div>
 
 </body>
 </html>
