@@ -289,6 +289,61 @@ Dengan memahami dan mengimplementasikan konsep-konsep dasar OOP seperti class, o
 </footer>
 
 </div>
+<!-- MODALS -->
 
+<div id="212783cdfb8b02e07cd86ca9f0596fe9" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('212783cdfb8b02e07cd86ca9f0596fe9')">&times;</span>
+    <iframe src="https://dartpad.dev/?id=212783cdfb8b02e07cd86ca9f0596fe9&null_safety=true"></iframe>
+  </div>
+</div>
+
+<div id="7cac28e1cd6a3c9dc8c9c39e590318ed" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('7cac28e1cd6a3c9dc8c9c39e590318ed')">&times;</span>
+    <iframe src="https://dartpad.dev/?id=7cac28e1cd6a3c9dc8c9c39e590318ed&null_safety=true"></iframe>
+  </div>
+</div>
+
+<div id="d64dbbab69d90e18341ded035e84c38c" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('d64dbbab69d90e18341ded035e84c38c')">&times;</span>
+    <iframe src="https://dartpad.dev/?id=d64dbbab69d90e18341ded035e84c38c&null_safety=true"></iframe>
+  </div>
+</div>
+
+<div id="b774072fd3efc25ce5446b6739306e7c" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('b774072fd3efc25ce5446b6739306e7c')">&times;</span>
+    <iframe src="https://dartpad.dev/?id=b774072fd3efc25ce5446b6739306e7c&null_safety=true"></iframe>
+  </div>
+</div>
+
+<div id="dbfd7f2af3131610f92c6162f8929fad" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('dbfd7f2af3131610f92c6162f8929fad')">&times;</span>
+    <iframe src="https://dartpad.dev/?id=dbfd7f2af3131610f92c6162f8929fad&null_safety=true"></iframe>
+  </div>
+</div>
+
+<script>
+function openModal(id){
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id){
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event){
+  const modals = document.getElementsByClassName("modal");
+  for(let i=0; i<modals.length; i++){
+    if(event.target == modals[i]){
+      modals[i].style.display = "none";
+    }
+  }
+}
+</script>
+  
 </body>
 </html>
