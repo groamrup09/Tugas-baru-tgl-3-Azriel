@@ -130,7 +130,21 @@ Dalam bahasa Dart, constructor dapat menggunakan formal parameter (<i>this.attri
 </div>
 
 <h2>3. Validasi Constructor (Mahasiswa)</h2>
-  <p>Latihan mandiri dalam membuat class Mahasiswa yang menampung data akademik. Class ini mengimplementasikan constructor untuk memastikan setiap objek mahasiswa memiliki data yang lengkap saat dibuat. </p>
+  <p><p>
+Validasi pada constructor merupakan teknik untuk memastikan bahwa data yang diberikan saat pembuatan object berada dalam kondisi yang benar (valid). 
+Tanpa validasi, object berpotensi memiliki nilai yang tidak logis atau berada di luar batas yang diperbolehkan.
+</p>
+
+<p>
+Dalam contoh class <i>Mahasiswa</i>, validasi dilakukan terhadap nilai IPK agar tetap berada dalam rentang 0.0 hingga 4.0. 
+Jika nilai yang dimasukkan berada di luar batas tersebut, sistem dapat memberikan peringatan atau menolak pembuatan object. 
+Hal ini bertujuan menjaga konsistensi dan integritas data akademik.
+</p>
+
+<p>
+Dengan menerapkan validasi pada constructor, kita memastikan bahwa setiap object yang dibuat sudah memenuhi aturan bisnis (business rule) sejak awal. 
+Pendekatan ini mengurangi kemungkinan terjadinya error pada proses eksekusi program di tahap berikutnya.
+</p> </p>
 <div class="card">
 <iframe src="https://dartpad.dev/?id=d64dbbab69d90e18341ded035e84c38c&null_safety=true"></iframe>
 </div>
