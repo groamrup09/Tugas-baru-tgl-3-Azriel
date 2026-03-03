@@ -37,7 +37,6 @@ button:hover{
   background:#0056b3;
 }
 
-/* MODAL */
 .modal{
   display:none;
   position:fixed;
@@ -78,29 +77,37 @@ button:hover{
 
 <div class="section">
 <h2>1. Class & Object (Car)</h2>
-<p>Contoh pembuatan class tanpa constructor.</p>
-<button onclick="openModal('e65f675f904008e065666cbf3f992720')">Lihat Source & Jalankan</button>
+<button onclick="openModal('212783cdfb8b02e07cd86ca9f0596fe9')">
+Lihat Source & Jalankan
+</button>
 </div>
 
 <div class="section">
 <h2>2. Constructor</h2>
-<p>Constructor digunakan untuk inisialisasi atribut.</p>
-<button onclick="openModal()">Lihat Source & Jalankan</button>
+<button onclick="openModal('7cac28e1cd6a3c9dc8c9c39e590318ed')">
+Lihat Source & Jalankan
+</button>
 </div>
 
 <div class="section">
 <h2>3. Validasi Constructor (Mahasiswa)</h2>
-<button onclick="openModal()">Lihat Source & Jalankan</button>
+<button onclick="openModal('d64dbbab69d90e18341ded035e84c38c')">
+Lihat Source & Jalankan
+</button>
 </div>
 
 <div class="section">
 <h2>4. Encapsulation (Person)</h2>
-<button onclick="openModal()">Lihat Source & Jalankan</button>
+<button onclick="openModal('b774072fd3efc25ce5446b6739306e7c')">
+Lihat Source & Jalankan
+</button>
 </div>
 
 <div class="section">
 <h2>5. Named Parameter (Produk)</h2>
-<button onclick="openModal()">Lihat Source & Jalankan</button>
+<button onclick="openModal('dbfd7f2af3131610f92c6162f8929fad')">
+Lihat Source & Jalankan
+</button>
 </div>
 
 <!-- MODAL -->
@@ -111,10 +118,10 @@ button:hover{
 </div>
 
 <script>
-function openModal(){
+function openModal(gistId){
   document.getElementById("modal").style.display="block";
   document.getElementById("dartFrame").src =
-  "https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c";
+  "https://dartpad.dev/embed-dart.html?gist=" + gistId;
 }
 
 function closeModal(){
