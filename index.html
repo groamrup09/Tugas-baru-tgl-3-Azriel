@@ -81,13 +81,12 @@ footer{
 <h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP)</h1>
 <p><b>Nama:</b> Azriel Miracle Yuandre</p>
 <p><b>NIM:</b> 251410024</p>
-  <p>kelas : si2a</p>
+  <p><b>kelas:</b> si2a</p>
 
 <div class="card">
 <p>
-Object Oriented Programming (OOP) adalah paradigma pemrograman yang berfokus pada objek sebagai unit utama. 
-Setiap objek memiliki <b>state</b> (data) dan <b>behavior</b> (perilaku). 
-Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dalam sistem yang kompleks.
+Object Oriented Programming (OOP) merupakan paradigma pemrograman modern yang berorientasi pada objek sebagai unit dasar pembentukan sistem. 
+Berbeda dengan paradigma prosedural yang berfokus pada alur instruksi, OOP mengorganisasi program berdasarkan representasi objek dunia nyata sehingga struktur program menjadi lebih sistematis dan terstruktur.
 </p>
 </div>
 
@@ -96,7 +95,9 @@ Tujuan OOP adalah membuat kode yang modular, reusable, dan mudah dipelihara dala
 <h2>1. Class & Object (Car)</h2>
 <div class="card">
 <p>
-Di bawah ini adalah contoh pendefinisian class Car. Class ini memiliki dua attribute (model dan color) serta dua method (start dan stop) yang merepresentasikan perilaku dasar sebuah mobil
+<b>Class</b> adalah blueprint atau cetak biru yang mendefinisikan struktur dan perilaku suatu objek. 
+Di dalam class terdapat attribute (data) dan method (fungsi). 
+Class tidak langsung menempati memori secara aktif sebelum dilakukan proses instansiasi.
 </p>
 <iframe src="https://dartpad.dev/?id=212783cdfb8b02e07cd86ca9f0596fe9&null_safety=true"></iframe>
 </div>
@@ -105,6 +106,9 @@ Di bawah ini adalah contoh pendefinisian class Car. Class ini memiliki dua attri
 <div class="card">
 <p>
 Constructor adalah metode inisialisasi yang dipanggil secara otomatis saat objek baru diciptakan dalam memori sistem. Di Dart, kita bisa menggunakan formal parameters (this.attribute) untuk menyederhanakan proses pengisian nilai attribute.
+Constructor</b> merupakan metode khusus yang dipanggil secara otomatis saat objek dibuat. 
+Constructor berfungsi untuk melakukan inisialisasi nilai awal attribute sehingga objek langsung berada dalam kondisi valid dan siap digunakan. 
+Dalam bahasa Dart, constructor dapat menggunakan formal parameter (<i>this.attribute</i>) untuk menyederhanakan penulisan kode.
 </p>
 <iframe src="https://dartpad.dev/?id=7cac28e1cd6a3c9dc8c9c39e590318ed&null_safety=true"></iframe>
 </div>
@@ -118,7 +122,9 @@ Constructor adalah metode inisialisasi yang dipanggil secara otomatis saat objek
 <h2>4. Encapsulation (Person)</h2>
 <div class="card">
 <p>
-Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. Di Dart, kita menggunakan awalan underscore (_) untuk membuat attribute bersifat private, sehingga hanya bisa diakses melalui getter dan setter.
+Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. Di Dart, kita menggunakan awalan underscore (_) untuk membuat attribute bersifat private, sehingga hanya bisa diakses melalui getter dan setter. prinsip fundamental dalam OOP yang bertujuan melindungi data internal objek dari akses langsung yang tidak sah. 
+Dengan membatasi akses melalui mekanisme getter dan setter, integritas data dapat dijaga dan kesalahan manipulasi dapat diminimalisir. 
+Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 </p>
 <iframe src="https://dartpad.dev/?id=b774072fd3efc25ce5446b6739306e7c&null_safety=true"></iframe>
 </div>
@@ -127,13 +133,16 @@ Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. D
 <div class="card">
 <p>
 Latihan lanjutan menggunakan Named Parameters dan operator required. Teknik ini membuat pembuatan objek menjadi lebih deskriptif dan aman karena compiler akan memberikan peringatan jika data wajib tidak diisi.
+Selain itu, Dart juga mendukung penggunaan <b>Named Parameter</b>, yaitu teknik pengisian parameter berdasarkan nama variabel. 
+Penggunaan keyword <b>required</b> memastikan bahwa parameter penting tidak boleh kosong saat proses instansiasi objek dilakukan. 
+Pendekatan ini meningkatkan kejelasan kode (readability) dan mengurangi potensi kesalahan input.
 </p>
 <iframe src="https://dartpad.dev/?id=dbfd7f2af3131610f92c6162f8929fad&null_safety=true"></iframe>
 </div>
 
 <footer>
-OOP mempermudah pengelolaan kode melalui enkapsulasi logika dalam objek.  
-Dart mendukung OOP secara native dan menjadi fondasi utama framework Flutter.
+Secara keseluruhan, OOP bertujuan meningkatkan modularitas, reusability (penggunaan ulang kode), serta maintainability (kemudahan pemeliharaan). 
+Dengan pendekatan ini, pengembangan perangkat lunak berskala besar menjadi lebih terstruktur, fleksibel, dan mudah dikembangkan di masa depan.
 </footer>
 
 </div>
