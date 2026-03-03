@@ -78,25 +78,13 @@ button:hover{
 <b>NIM:</b> 251410024</p>
 
 <div class="section">
-<h2>Contoh 1: Class Car</h2>
+<h2>Contoh Class Car</h2>
 <p>Klik tombol untuk melihat dan menjalankan kode di DartPad.</p>
-<button onclick="openModal('https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c')">
-Lihat & Jalankan Code
-</button>
-</div>
 
-<div class="section">
-<h2>Contoh 2: Class Mahasiswa (Validasi Constructor)</h2>
-<button onclick="openModal('https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c')">
+<button onclick="openModal()">
 Lihat & Jalankan Code
 </button>
-</div>
 
-<div class="section">
-<h2>Contoh 3: Encapsulation (Getter & Setter)</h2>
-<button onclick="openModal('https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c')">
-Lihat & Jalankan Code
-</button>
 </div>
 
 <!-- ===== MODAL ===== -->
@@ -107,9 +95,10 @@ Lihat & Jalankan Code
 </div>
 
 <script>
-function openModal(link){
+function openModal(){
   document.getElementById("modal").style.display="block";
-  document.getElementById("dartFrame").src=link;
+  document.getElementById("dartFrame").src =
+  "https://dartpad.dev/embed-dart.html?id=bd3af42ea20c8e23cc0e63354048a81c";
 }
 
 function closeModal(){
