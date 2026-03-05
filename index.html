@@ -200,30 +200,17 @@ Hal ini memungkinkan fleksibilitas dalam pemodelan sistem.
 
 // Kelas  : Si2A
 
-// Mendefinisikan class Car
 class Car {
-  String? model; // Atribut untuk menyimpan model mobil (contoh: Toyota)
-  String? color; // Atribut untuk menyimpan warna mobil (contoh: Merah)
-  // Method untuk menyalakan mobil
+  String? model; 
+  String? color;
   void start() {
-    print('Car started!'); // Mencetak status mobil dinyalakan
+    print('Car started!');
   }
-  // Method untuk menghentikan mobil
   void stop() {
-    print('Car stopped!'); // Mencetak status mobil dihentikan
+    print('Car stopped!'); 
   }
 }
-void main() {
-  // Membuat objek myCar dari class Car
-  Car myCar = Car();
-  
-  // Mengisi nilai atribut objek
-  myCar.model = "Sedan"; // Mengatur model menjadi Sedan
-  myCar.color = "Merah"; // Mengatur warna menjadi Merah
-  // Memanggil method objek
-  myCar.start(); // Menjalankan fungsi start
-  myCar.stop();  // Menjalankan fungsi stop
-}
+
 </pre>
 </div>
 <button class="btn" onclick="openModal('967b579cbb677c6c6af712861f3707e8')">
@@ -241,30 +228,22 @@ Dalam bahasa Dart, constructor dapat menggunakan formal parameter (<i>this.attri
 </p>
   <div class="card">
     <pre>
-    // Nama   : Azriel Miracle Yuandre
+// Nama   : Azriel Miracle Yuandre
 // Nim    : 251410024
 // Kelas  : Si2A
 
 class Car {
-  String model; // Properti model
-  String color; // Properti warna
+  String model;
+  String color; 
 
-  // Constructor untuk inisialisasi model dan color secara langsung
   Car(this.model, this.color);
 
-  // Method untuk menyalakan mobil
   void start() {
-    print('Engine Online: $model'); // Menampilkan pesan dengan nama model
+    print('Engine Online: $model');
   }
 }
 
-void main() {
-  // Membuat objek myCar dari class Car
-  Car myCar = Car("Sedan", "Merah");
 
-  myCar.start(); // Menjalankan fungsi start
-  print(myCar.color); // Menampilkan atribut warna
-}
     
   </p>
     </pre>
@@ -294,32 +273,21 @@ Pendekatan ini mengurangi kemungkinan terjadinya error pada proses eksekusi prog
     <div class="card">
       <pre>
     <p>
-      // Nama   : Azriel Miracle Yaundre
+// Nama   : Azriel Miracle Yaundre
 // Nim    : 251410024
 // Kelas  : Si2A
 
 
 class Mahasiswa {
-  String nama; // nama : Azriel Miracle Yaundre
-  String nim;  // nim : 251410024
-  double ipk;  // ipk : 3.98
+  String nama; 
+  String nim; 
+  double ipk;  
 
-  // Constructor Mahasiswa (Menginisialisasi data input)
   Mahasiswa(this.nama, this.nim, this.ipk);
+      if (ipk < 0.0 || ipk > 4.0) {
+      throw ArgumentError('IPK harus 0.0 - 4.0');
 
-  // Method untuk menampilkan data mahasiswa ke konsol
-  void tampilkanData() {
-    print('Nama : $nama');
-    print('NIM  : $nim');
-    print('IPK  : $ipk');
-  }
-}
-
-void main() {
-  // Membuat objek mhs1 dari class Mahasiswa
-  Mahasiswa mhs1 = Mahasiswa("Azriel Miracle Yuandre", "251410024", 3.98);
   
-  mhs1.tampilkanData(); // Memanggil method tampilkanData
 }
       
     </p>
@@ -346,26 +314,14 @@ Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 
 
 class Person {
-  String _name; // Azriel Miracle Yuandre , Atribut private (diawali dengan underscore)
-  int age;      // Atribut umur (contoh: 20)
+  String _name; 
+  int age;     
 
   Person(this._name, this.age);
 
-  // Setter untuk mengubah nilai _name secara aman
   void setName(String name) => _name = name;
   
-  // Getter untuk mengambil nilai _name dari luar class
   String getName() => _name;
-}
-
-void main() {
-  // Membuat objek person dari class Person
-  Person person = Person("Azriel Miracle Yuandre", 20);
-
-  print(person.age);       // Menampilkan atribut umur
-  person.setName("Azriel Miracle Yuandre");  // Mengatur nama menjadi Aqila
-  print(person.getName());  // Menampilkan hasil dari getter
-}
     
   </p>
     </pre>
@@ -403,94 +359,7 @@ class Produk {
     this.stok = 0,
     this.kategori = 'Umum',
   });
-}
 
-void main() {
-  // Membuat objek laptop
-  Produk laptop = Produk(
-    id: "P001",
-    nama: "Laptop Gaming",
-    harga: 15000000,
-    stok: 15,
-    kategori: "Elektronik",
-  );
-
-  // Membuat objek smartphone
-  Produk smartphone = Produk(
-    id: "P002",
-    nama: "Smartphone Flagship",
-    harga: 12000000,
-    stok: 25,
-  );
-
-  // Membuat objek kamera
-  Produk kamera = Produk(
-    id: "P003",
-    nama: "Kamera Mirrorless",
-    harga: 20000000,
-  );
-
-  print(// Nama   : Azriel Miracle Yuandre
-// Nim    : 251410024
-// Kelas  : Si2A
-
-
-class Produk {
-  // Atribut final (nilainya tidak bisa diubah setelah diinisialisasi)
-  final String id, nama; // id : P001, nama : Laptop Gaming
-  final double harga;    // harga : 15000000
-  final int stok;        // stok : 15
-  final String kategori; // kategori : Elektronik
-
-  // Constructor dengan Named Parameters ({}) dan required
-  Produk({
-    required this.id,
-    required this.nama,
-    required this.harga,
-    this.stok = 0,
-    this.kategori = 'Umum',
-  });
-}
-
-void main() {
-  // Membuat objek laptop
-  Produk laptop = Produk(
-    id: "P001",
-    nama: "Laptop Gaming",
-    harga: 15000000,
-    stok: 15,
-    kategori: "Elektronik",
-  );
-
-  // Membuat objek smartphone
-  Produk smartphone = Produk(
-    id: "P002",
-    nama: "Smartphone Flagship",
-    harga: 12000000,
-    stok: 25,
-  );
-
-  // Membuat objek kamera
-  Produk kamera = Produk(
-    id: "P003",
-    nama: "Kamera Mirrorless",
-    harga: 20000000,
-  );
-
-  print(laptop.nama); // Menampilkan atribut nama
-  print(smartphone.nama); // Menampilkan atribut nama
-  print(kamera.nama); // Menampilkan atribut nama
-}
-laptop.nama); // Menampilkan atribut nama
-  print(smartphone.nama); // Menampilkan atribut nama
-  print(kamera.nama); // Menampilkan atribut nama
-}
-
-  print(laptop.nama); // Menampilkan atribut nama
-  print(smartphone.nama); // Menampilkan atribut nama
-  print(kamera.nama); // Menampilkan atribut nama
-}
-    
   </p>
     </pre>
   </div>
