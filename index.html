@@ -296,18 +296,18 @@ Pendekatan ini mengurangi kemungkinan terjadinya error pada proses eksekusi prog
 // Nim    : 251410024
 // Kelas  : Si2A
 
-
 class Mahasiswa {
-  String nama; 
-  String nim; 
-  double ipk;  
+  String nama;
+  String nim;
+  double ipk;
 
-  Mahasiswa(this.nama, this.nim, this.ipk);
-      if (ipk < 0.0 || ipk > 4.0) {
+  Mahasiswa(this.nama, this.nim, this.ipk) {
+    if (ipk < 0.0 || ipk > 4.0) {
       throw ArgumentError('IPK harus 0.0 - 4.0');
-
-  
+    }
+  }
 }
+
       
     </p>
       </pre>
@@ -331,24 +331,19 @@ Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 // Nim    : 251410024
 // Kelas  : Si2A
 
-class Mahasiswa {
-  String nama; 
-  String nim;  
-  double ipk;  
+class Person {
+  String _name;
+  int age;
 
-  Mahasiswa(this.nama, this.nim, this.ipk);
+  Person(this._name, this.age);
 
-  void tampilkanData() {
-    print('Nama : $nama');
-    print('NIM  : $nim');
-    print('IPK  : $ipk');
+  void setName(String name) {
+    _name = name;
   }
-}
 
-void main() {
-  Mahasiswa mhs1 = Mahasiswa( $nama, $nim, $ipk);
-  
-  mhs1.tampilkanData(); 
+  String getName() {
+    return _name;
+  }
 }
 
     
@@ -378,13 +373,12 @@ Pendekatan ini meningkatkan kejelasan kode (readability) dan mengurangi potensi 
 // Kelas  : Si2A
 
 class Produk {
+  final String id;
+  final String nama;
+  final double harga;
+  final int stok;
+  final String kategori;
 
-  final String id, nama; 
-  final double harga;    
-  final int stok;        
-  final String kategori; 
-
-  
   Produk({
     required this.id,
     required this.nama,
