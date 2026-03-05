@@ -18,6 +18,8 @@ body{
 .container{
   max-width:1000px;
   margin:auto;
+  position:relative;
+  z-index:1;
 }
 
 h1{
@@ -89,6 +91,14 @@ footer{
 .btn:hover{
   background:#1e40af;
 }
+#particles-js{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
 
 /* MODAL */
 .modal{
@@ -138,6 +148,7 @@ footer{
 </head>
 
 <body>
+  <div id="particles-js"></div>
 
 <div class="container">
 
@@ -521,6 +532,26 @@ window.onclick = function(event){
   }
 }
 </script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+tsParticles.load("particles-js", {
+  particles: {
+    number: { value: 80 },
+    color: { value: "#2563eb" },
+    shape: { type: "circle" },
+    opacity: { value: 0.5 },
+    size: { value: 3 },
+    move: {
+      enable: true,
+      speed: 1
+    }
+  },
+  background: {
+    color: "#f8fafc"
+  }
+});
+</script>
+</div>
 </body>
 </html>
