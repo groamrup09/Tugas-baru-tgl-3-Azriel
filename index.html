@@ -202,13 +202,22 @@ Hal ini memungkinkan fleksibilitas dalam pemodelan sistem.
 
 class Car {
   String? model; 
-  String? color;
+  String? color; 
   void start() {
-    print('Car started!');
+    print('Car started!'); 
   }
+ 
   void stop() {
-    print('Car stopped!'); 
+    print('Car stopped!');
   }
+}
+void main() {
+  Car myCar = Car();
+ 
+  myCar.model = "Sedan"; 
+  myCar.color = "Merah"; 
+  myCar.start(); 
+  myCar.stop(); 
 }
 
 </pre>
@@ -233,14 +242,24 @@ Dalam bahasa Dart, constructor dapat menggunakan formal parameter (<i>this.attri
 // Kelas  : Si2A
 
 class Car {
-  String model;
+  String model; 
   String color; 
 
+  
   Car(this.model, this.color);
 
+  
   void start() {
-    print('Engine Online: $model');
+    print('Engine Online: $model'); 
   }
+}
+
+void main() {
+  
+  Car myCar = Car("Sedan", "Merah");
+
+  myCar.start(); 
+  print(myCar.color); 
 }
 
 
@@ -312,16 +331,26 @@ Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 // Nim    : 251410024
 // Kelas  : Si2A
 
+class Mahasiswa {
+  String nama; 
+  String nim;  
+  double ipk;  
 
-class Person {
-  String _name; 
-  int age;     
+  Mahasiswa(this.nama, this.nim, this.ipk);
 
-  Person(this._name, this.age);
+  void tampilkanData() {
+    print('Nama : $nama');
+    print('NIM  : $nim');
+    print('IPK  : $ipk');
+  }
+}
 
-  void setName(String name) => _name = name;
+void main() {
+  Mahasiswa mhs1 = Mahasiswa( $nama, $nim, $ipk);
   
-  String getName() => _name;
+  mhs1.tampilkanData(); 
+}
+
     
   </p>
     </pre>
@@ -349,13 +378,13 @@ Pendekatan ini meningkatkan kejelasan kode (readability) dan mengurangi potensi 
 // Kelas  : Si2A
 
 class Produk {
-  // Atribut final (nilainya tidak bisa diubah setelah diinisialisasi)
-  final String id, nama; // id : P001, nama : Laptop Gaming
-  final double harga;    // harga : 15000000
-  final int stok;        // stok : 15
-  final String kategori; // kategori : Elektronik
 
-  // Constructor dengan Named Parameters ({}) dan required
+  final String id, nama; 
+  final double harga;    
+  final int stok;        
+  final String kategori; 
+
+  
   Produk({
     required this.id,
     required this.nama,
@@ -363,6 +392,7 @@ class Produk {
     this.stok = 0,
     this.kategori = 'Umum',
   });
+}
 
   </p>
     </pre>
