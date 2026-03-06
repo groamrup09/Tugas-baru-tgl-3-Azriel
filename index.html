@@ -293,16 +293,31 @@ Pendekatan ini mengurangi kemungkinan terjadinya error pada proses eksekusi prog
 // Nim    : 251410024
 // Kelas  : Si2A
 
-class Mahasiswa {
-  String nama;
-  String nim;
-  double ipk;
+// Nama   : Azriel Miracle Yuandre
 
-  Mahasiswa(this.nama, this.nim, this.ipk) {
-    if (ipk < 0.0 || ipk > 4.0) {
-      throw ArgumentError('IPK harus 0.0 - 4.0');
-    }
+// Nim    : 251410024
+
+// Kelas  : Si2A
+
+
+class Mahasiswa {
+  String nama; 
+  String nim; 
+  double ipk;  
+
+  Mahasiswa(this.nama, this.nim, this.ipk);
+
+  void tampilkanData() {
+    print('Nama : $nama');
+    print('NIM  : $nim');
+    print('IPK  : $ipk');
   }
+}
+
+void main() {
+  Mahasiswa mhs1 = Mahasiswa("Azriel Miracle yuandre", "251410024", 3.98);
+  
+  mhs1.tampilkanData();
 }
 </pre>
 </div>
@@ -325,18 +340,22 @@ Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 // Kelas  : Si2A
 
 class Person {
-  String _name;
-  int age;
+  String _name; 
+  int age;    
 
   Person(this._name, this.age);
 
-  void setName(String name) {
-    _name = name;
-  }
+  void setName(String name) => _name = name;
+  
+  String getName() => _name;
+}
 
-  String getName() {
-    return _name;
-  }
+void main() {
+  Person person = Person("Azriel Miracle Yuandre", 20);
+
+  print(person.age); 
+  person.setName("Azriel Miracle Yuandre");
+  print(person.getName()); 
 }
 </pre>
 </div>
@@ -360,10 +379,9 @@ Pendekatan ini meningkatkan kejelasan kode (readability) dan mengurangi potensi 
 // Kelas  : Si2A
 
 class Produk {
-  final String id;
-  final String nama;
-  final double harga;
-  final int stok;
+  final String id, nama; 
+  final double harga; 
+  final int stok;   
   final String kategori;
 
   Produk({
@@ -374,6 +392,34 @@ class Produk {
     this.kategori = 'Umum',
   });
 }
+
+void main() {
+  Produk laptop = Produk(
+    id: "P003",
+    nama: "Laptop soak",
+    harga: 15000000,
+    stok: 15,
+    kategori: "Elektronik",
+  );
+
+  Produk smartphone = Produk(
+    id: "P004",
+    nama: "Smartphone edge",
+    harga: 12000000,
+    stok: 25,
+  );
+
+  Produk kamera = Produk(
+    id: "P005",
+    nama: "Kamera Mirrorless",
+    harga: 20000000,
+  );
+
+  print(laptop.nama); 
+  print(smartphone.nama); 
+  print(kamera.nama); 
+}
+ 
 </pre>
 </div>
 <button class="btn" onclick="openModal('b803d969482da4165193e77c5295c795')">
