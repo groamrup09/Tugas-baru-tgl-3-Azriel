@@ -132,6 +132,10 @@ footer{
   font-weight:bold;
 }
 
+.close:hover {
+  color: #2563eb;
+}
+
 @keyframes fadeIn{
   from{opacity:0; transform:translateY(-20px);}
   to{opacity:1; transform:translateY(0);}
@@ -147,7 +151,7 @@ footer{
 <h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP)</h1>
 <p><b>Nama:</b> Azriel Miracle Yuandre</p>
 <p><b>NIM:</b> 251410024</p>
-  <p><b>kelas:</b> si2a</p>
+<p><b>kelas:</b> si2a</p>
 
 <div class="card">
 <p>
@@ -198,14 +202,13 @@ Hal ini memungkinkan fleksibilitas dalam pemodelan sistem.
 <div class="card">
 <pre>
 // Nama   : Azriel Miracle Yuandre
-
 // Nim    : 251410024
-
 // Kelas  : Si2A
 
 class Car {
   String? model; 
   String? color; 
+  
   void start() {
     print('Car started!'); 
   }
@@ -214,6 +217,7 @@ class Car {
     print('Car stopped!');
   }
 }
+
 void main() {
   Car myCar = Car();
  
@@ -222,7 +226,6 @@ void main() {
   myCar.start(); 
   myCar.stop(); 
 }
-
 </pre>
 </div>
 <button class="btn" onclick="openModal('967b579cbb677c6c6af712861f3707e8')">
@@ -234,12 +237,12 @@ Lihat Kode
 <div class="card">
 <p>
 Constructor adalah metode inisialisasi yang dipanggil secara otomatis saat objek baru diciptakan dalam memori sistem. Di Dart, kita bisa menggunakan formal parameters (this.attribute) untuk menyederhanakan proses pengisian nilai attribute.
-Constructor</b> merupakan metode khusus yang dipanggil secara otomatis saat objek dibuat. 
+Constructor merupakan metode khusus yang dipanggil secara otomatis saat objek dibuat. 
 Constructor berfungsi untuk melakukan inisialisasi nilai awal attribute sehingga objek langsung berada dalam kondisi valid dan siap digunakan. 
 Dalam bahasa Dart, constructor dapat menggunakan formal parameter (<i>this.attribute</i>) untuk menyederhanakan penulisan kode.
 </p>
-  <div class="card">
-    <pre>
+<div class="card">
+<pre>
 // Nama   : Azriel Miracle Yuandre
 // Nim    : 251410024
 // Kelas  : Si2A
@@ -248,36 +251,28 @@ class Car {
   String model; 
   String color; 
 
-  
   Car(this.model, this.color);
 
-  
   void start() {
     print('Engine Online: $model'); 
   }
-
+}
 
 void main() {
-  
   Car myCar = Car("Sedan", "Merah");
-
   myCar.start(); 
   print(myCar.color); 
 }
-
-}
-    
-  </p>
-    </pre>
-  </div>
+</pre>
+</div>
 <button class="btn" onclick="openModal('556cd77508c8381a0719ead99a41fe27')">
 Lihat Kode
 </button>
 </div>
 
 <h2>3. Validasi Constructor (Mahasiswa)</h2>
-  <div class="card">
-  <p>
+<div class="card">
+<p>
 Validasi pada constructor merupakan teknik untuk memastikan bahwa data yang diberikan saat pembuatan object berada dalam kondisi yang benar (valid). 
 Tanpa validasi, object berpotensi memiliki nilai yang tidak logis atau berada di luar batas yang diperbolehkan.
 </p>
@@ -292,9 +287,8 @@ Hal ini bertujuan menjaga konsistensi dan integritas data akademik.
 Dengan menerapkan validasi pada constructor, kita memastikan bahwa setiap object yang dibuat sudah memenuhi aturan bisnis (business rule) sejak awal. 
 Pendekatan ini mengurangi kemungkinan terjadinya error pada proses eksekusi program di tahap berikutnya.
 </p> 
-    <div class="card">
-      <pre>
-    <p>
+<div class="card">
+<pre>
 // Nama   : Azriel Miracle Yaundre
 // Nim    : 251410024
 // Kelas  : Si2A
@@ -310,14 +304,11 @@ class Mahasiswa {
     }
   }
 }
-
-      
-    </p>
-      </pre>
-    </div>
+</pre>
+</div>
 <button class="btn" onclick="openModal('44b739d4c8e40937611f40845e661707')">
-  Lihat Kode
-  </button>
+Lihat Kode
+</button>
 </div>
 
 <h2>4. Encapsulation (Person)</h2>
@@ -327,9 +318,8 @@ Encapsulation adalah teknik untuk menyembunyikan detail implementasi internal. D
 Dengan membatasi akses melalui mekanisme getter dan setter, integritas data dapat dijaga dan kesalahan manipulasi dapat diminimalisir. 
 Encapsulation meningkatkan keamanan serta stabilitas sistem dalam skala besar.
 </p>
-  <div class="card">
-    <pre>
-  <p>
+<div class="card">
+<pre>
 // Nama   : Azriel Miracle Yuandre
 // Nim    : 251410024
 // Kelas  : Si2A
@@ -348,14 +338,11 @@ class Person {
     return _name;
   }
 }
-
-    
-  </p>
-    </pre>
-  </div>
+</pre>
+</div>
 <button class="btn" onclick="openModal('d220dd26797081f9eb41f7a14d4e33df')">
-  Lihat Kode
-  </button>
+Lihat Kode
+</button>
 </div>
 
 <h2>5. Named Parameter (Produk)</h2>
@@ -366,13 +353,10 @@ Selain itu, Dart juga mendukung penggunaan <b>Named Parameter</b>, yaitu teknik 
 Penggunaan keyword <b>required</b> memastikan bahwa parameter penting tidak boleh kosong saat proses instansiasi objek dilakukan. 
 Pendekatan ini meningkatkan kejelasan kode (readability) dan mengurangi potensi kesalahan input.
 </p>
-  <div class="card">
-    <pre>
-  <p>
+<div class="card">
+<pre>
 // Nama   : Azriel Miracle Yuandre
-
 // Nim    : 251410024
-
 // Kelas  : Si2A
 
 class Produk {
@@ -390,25 +374,21 @@ class Produk {
     this.kategori = 'Umum',
   });
 }
-
-  </p>
-    </pre>
-  </div>
+</pre>
+</div>
 <button class="btn" onclick="openModal('b803d969482da4165193e77c5295c795')">
-  Lihat Kode
-  </button>
+Lihat Kode
+</button>
 </div>
 
-    <h2>Komentar Nim dan nama</h2>
+<h2>Komentar Nim dan nama</h2>
 <div class="card">
-  <pre>
-  <p>
+<pre>
 // Nama   : Azriel Miracle Yuandre
 // Nim    : 251410024
 // Kelas  : Si2A
 
 void main() {
-
   String nama = "Azriel Miracle Yuandre";
   String nim = "251410024";
   int umur = 20;
@@ -419,7 +399,7 @@ void main() {
   print('Umur\t\t: $umur');
   print('Jurusan\t\t: $jurusan');
 }
-  </pre>
+</pre>
 <p>
 Contoh Komentar Nama dan Nim
 </p>
@@ -459,11 +439,7 @@ Dengan memahami dan mengimplementasikan konsep-konsep dasar OOP seperti class, o
 
 </div>
 
-
-
-  
 <!-- MODALS -->
-
 <div id="967b579cbb677c6c6af712861f3707e8" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('967b579cbb677c6c6af712861f3707e8')">&times;</span>
@@ -499,7 +475,7 @@ Dengan memahami dan mengimplementasikan konsep-konsep dasar OOP seperti class, o
   </div>
 </div>
 
-  <div id="f8162b9955c993027c93673ccb4bcb55" class="modal">
+<div id="f8162b9955c993027c93673ccb4bcb55" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('f8162b9955c993027c93673ccb4bcb55')">&times;</span>
     <iframe src="https://dartpad.dev/?id=f8162b9955c993027c93673ccb4bcb55&null_safety=true"></iframe>
@@ -517,15 +493,13 @@ function closeModal(id){
 
 window.onclick = function(event){
   const modals = document.getElementsByClassName("modal");
-  for(let i=0; i<modals.length; i++){
+  for(let i = 0; i < modals.length; i++){
     if(event.target == modals[i]){
       modals[i].style.display = "none";
     }
   }
 }
-  }
-});
 </script>
-</div>
+
 </body>
 </html>
